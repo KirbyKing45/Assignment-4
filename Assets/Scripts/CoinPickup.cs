@@ -7,6 +7,6 @@ public class CoinPickup : Pickup
     {
         pickupType = EPickupType.Coin;
         Animator animator = GetComponent<Animator>();
-        animator.Play("CoinPickup");
+        animator.Play("CoinSpin");
     }
 }
