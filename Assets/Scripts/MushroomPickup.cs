@@ -32,6 +32,7 @@ public class MushroomPickup : Pickup
         velocity.x = (UnityEngine.Random.Range(0, 10) % 2 == 0) ? (settings.MushroomSpeed) : (-settings.MushroomSpeed);
     }
 
+    [System.Obsolete]
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (pickupState == EPickupState.Active)

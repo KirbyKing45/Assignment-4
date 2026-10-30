@@ -10663,6 +10663,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ItemBox
       objectReference: {fileID: 0}
+    - target: {fileID: 3715475066305166878, guid: 25a727078372a434280f0f7535839433, type: 3}
+      propertyPath: contents
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -114,6 +114,7 @@ public class Goomba : Enemy
         }
     }
 
+    [System.Obsolete]
     private void OnTriggerEnter2D(Collider2D collision)
     {
         bool flipMovementDirection = false;
