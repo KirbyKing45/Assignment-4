@@ -34,6 +34,8 @@ public class PSwitchGO : MonoBehaviour
         {
             SwitchBlocksAndConis();
             isTimerRunning = true;
+
+            
         }
     }
 
