@@ -16,8 +16,8 @@ public enum EItemBoxContents : byte
     Mushroom,
     Coin1,
     Coin5,
-    Coin10
-
+    Coin10,
+    PSwitch
         // TODO: Add additional ItemBox contents here
 }
 
@@ -153,6 +153,13 @@ public class ItemBox : MonoBehaviour
             if (contents == EItemBoxContents.Mushroom)
             {
                 Game.Instance.SpawnMushroomPickup(location);
+            }
+            else
+            {
+                if (contents == EItemBoxContents.PSwitch)
+                {
+                    Game.Instance.SpawnPSwitch(location);
+                }
             }
         }
     }

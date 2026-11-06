@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PSwitchGO : MonoBehaviour
 {
-
+    private Animator animator;
     public BreakableBlock BB;
     public CoinPickup MyCoin;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -11,6 +11,8 @@ public class PSwitchGO : MonoBehaviour
     {
         isTimerRunning = false;
         currentTime = 10.0f;
+        animator = GetComponent<Animator>();
+        animator.Play("PSwitchNotPressed");
     }
 
     // Update is called once per frame
@@ -22,7 +24,9 @@ public class PSwitchGO : MonoBehaviour
             if (currentTime <= 0.0f)
             {
                 isTimerRunning = false;
-                SwitchBlocksAndConis();
+                SwitchBlocksAndCoins();
+                animator.Play("PSwitchNotPressed");
+                currentTime = 10.0f;
             }
         }
       
@@ -30,15 +34,19 @@ public class PSwitchGO : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+
+
         if (collision.gameObject.CompareTag("Mario"))
         {
-            SwitchBlocksAndConis();
-            isTimerRunning = true;
+            if (!isTimerRunning)
+            {
+                SwitchBlocksAndCoins();
+                isTimerRunning = true;
+                animator.Play("PSwitchPressed");
 
-            
+            }
         }
     }
-
     public class SwitchTimer : MonoBehaviour
     {
         private bool isTimerRunning = false;
@@ -48,7 +56,7 @@ public class PSwitchGO : MonoBehaviour
 
         
     }
-    private void SwitchBlocksAndConis()
+    private void SwitchBlocksAndCoins()
     {
         CoinPickup[] coinPickupObjects = FindObjectsByType<CoinPickup>();
         BreakableBlock[] blockObjects = FindObjectsByType<BreakableBlock>();

@@ -438,11 +438,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7410661032419944695, guid: 420beddc0df22cd4388ef9bae72c8912, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.160717
+      value: 1.87
       objectReference: {fileID: 0}
     - target: {fileID: 7410661032419944695, guid: 420beddc0df22cd4388ef9bae72c8912, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.9403162
+      value: -2.07
       objectReference: {fileID: 0}
     - target: {fileID: 7410661032419944695, guid: 420beddc0df22cd4388ef9bae72c8912, type: 3}
       propertyPath: m_LocalPosition.z
@@ -483,7 +483,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1262132511132844158, guid: 420beddc0df22cd4388ef9bae72c8912, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2109981534}
   m_SourcePrefab: {fileID: 100100000, guid: 420beddc0df22cd4388ef9bae72c8912, type: 3}
 --- !u!1001 &215340339
 PrefabInstance:
@@ -10020,6 +10023,7 @@ MonoBehaviour:
   mushroomPickupPrefab: {fileID: 167795232799714292, guid: f91d973b9b8cee548a0f660ef8dcc7cf, type: 3}
   itemBoxCoinPrefab: {fileID: 8880718165515726397, guid: 3b91ff4d341c9ae49bf98907fdd2704a, type: 3}
   breakableBlockBitPrefab: {fileID: 4391284459645257670, guid: dc6b02cb90037284a95115c40fa23fd3, type: 3}
+  PSwitchPrefab: {fileID: 0}
 --- !u!4 &1941876774
 Transform:
   m_ObjectHideFlags: 0
@@ -10318,6 +10322,33 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c8ed4f0267b00c44bc7c457f73f2a98, type: 3}
+--- !u!1 &2109981533 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1262132511132844158, guid: 420beddc0df22cd4388ef9bae72c8912, type: 3}
+  m_PrefabInstance: {fileID: 139234408}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2109981534
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109981533}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c8ba7f574f13e0145aba3ba81e979ba4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2113162828
 GameObject:
   m_ObjectHideFlags: 0
@@ -10734,7 +10765,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3715475066305166878, guid: 25a727078372a434280f0f7535839433, type: 3}
       propertyPath: contents
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -13,6 +13,7 @@ public class Game : MonoBehaviour
     public GameObject mushroomPickupPrefab;
     public GameObject itemBoxCoinPrefab;
     public GameObject breakableBlockBitPrefab;
+    public GameObject PSwitchPrefab;
 
     private GameObject deadMario = null;
     private Vector2 marioSpawnLocation = Vector2.zero;
@@ -203,6 +204,15 @@ public class Game : MonoBehaviour
         }
     }
 
+    public void SpawnPSwitch(Vector2 location)
+    {
+        if (PSwitchPrefab != null)
+        {
+            GameObject PSwitchObject = Instantiate(PSwitchPrefab, new Vector3(location.x, location.y, 1.0f), Quaternion.identity);
+            PSwitchGO PSwitch = PSwitchObject.GetComponent<PSwitchGO>();
+            //PSwitch.Spawn();
+        }
+    }
     public void SpawnItemBoxCoin(Vector2 location)
     {
         if (itemBoxCoinPrefab != null)
