@@ -1,18 +1,19 @@
 using JetBrains.Annotations;
 using UnityEngine;
 
-public class PSwitchGO : MonoBehaviour
+public class PSwitchGO : Pickup
 {
     private Animator animator;
-    public BreakableBlock BB;
-    public CoinPickup MyCoin;
+   // public GameObject BB;
+   // public GameObject MyCoin;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         isTimerRunning = false;
         currentTime = 10.0f;
         animator = GetComponent<Animator>();
-        animator.Play("PSwitchNotPressed");
+       transform.position = transform.position + new Vector3(0, 1, 0);
+      //  animator.Play("PSwitchNotPressed");
     }
 
     // Update is called once per frame
@@ -25,7 +26,7 @@ public class PSwitchGO : MonoBehaviour
             {
                 isTimerRunning = false;
                 SwitchBlocksAndCoins();
-                animator.Play("PSwitchNotPressed");
+               // animator.Play("PSwitchNotPressed");
                 currentTime = 10.0f;
             }
         }
@@ -65,7 +66,7 @@ public class PSwitchGO : MonoBehaviour
             Vector3 Position = Coin.transform.position;
             Destroy(Coin.gameObject);
 
-            
+            GameObject BB = Game.Instance.BB;
             Instantiate(BB, Position, Quaternion.identity);
         }
 
@@ -74,7 +75,7 @@ public class PSwitchGO : MonoBehaviour
             Vector3 Position = Block.transform.position;
             Destroy(Block.gameObject);
 
-
+            GameObject MyCoin = Game.Instance.Coin;
             Instantiate(MyCoin, Position, Quaternion.identity);
         }
 

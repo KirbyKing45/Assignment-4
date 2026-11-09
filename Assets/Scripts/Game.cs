@@ -14,6 +14,8 @@ public class Game : MonoBehaviour
     public GameObject itemBoxCoinPrefab;
     public GameObject breakableBlockBitPrefab;
     public GameObject PSwitchPrefab;
+    public GameObject BB;
+    public GameObject Coin;
 
     private GameObject deadMario = null;
     private Vector2 marioSpawnLocation = Vector2.zero;
@@ -209,8 +211,9 @@ public class Game : MonoBehaviour
         if (PSwitchPrefab != null)
         {
             GameObject PSwitchObject = Instantiate(PSwitchPrefab, new Vector3(location.x, location.y, 1.0f), Quaternion.identity);
+            PSwitchObject.transform.position  = location;
             PSwitchGO PSwitch = PSwitchObject.GetComponent<PSwitchGO>();
-            //PSwitch.Spawn();
+            PSwitch.Spawn();
         }
     }
     public void SpawnItemBoxCoin(Vector2 location)

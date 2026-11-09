@@ -427,11 +427,11 @@ PrefabInstance:
     - target: {fileID: -1411042747478414633, guid: 420beddc0df22cd4388ef9bae72c8912, type: 3}
       propertyPath: BB
       value: 
-      objectReference: {fileID: 3487161757919069989, guid: 2c8ed4f0267b00c44bc7c457f73f2a98, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: -1411042747478414633, guid: 420beddc0df22cd4388ef9bae72c8912, type: 3}
       propertyPath: MyCoin
       value: 
-      objectReference: {fileID: 4810612124317717295, guid: c0026d0fb82e0824aa52b5728426ca41, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 1262132511132844158, guid: 420beddc0df22cd4388ef9bae72c8912, type: 3}
       propertyPath: m_Name
       value: PSwitch
@@ -785,6 +785,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 249775007}
   m_CullTransparentMesh: 1
+--- !u!1 &298614809 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5240736953002796543, guid: 2c8ed4f0267b00c44bc7c457f73f2a98, type: 3}
+  m_PrefabInstance: {fileID: 6120362604428563159}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &389107613
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10023,7 +10028,9 @@ MonoBehaviour:
   mushroomPickupPrefab: {fileID: 167795232799714292, guid: f91d973b9b8cee548a0f660ef8dcc7cf, type: 3}
   itemBoxCoinPrefab: {fileID: 8880718165515726397, guid: 3b91ff4d341c9ae49bf98907fdd2704a, type: 3}
   breakableBlockBitPrefab: {fileID: 4391284459645257670, guid: dc6b02cb90037284a95115c40fa23fd3, type: 3}
-  PSwitchPrefab: {fileID: 0}
+  PSwitchPrefab: {fileID: 1262132511132844158, guid: 420beddc0df22cd4388ef9bae72c8912, type: 3}
+  BB: {fileID: 298614809}
+  Coin: {fileID: 1470704260}
 --- !u!4 &1941876774
 Transform:
   m_ObjectHideFlags: 0
@@ -10725,7 +10732,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2738938054515243113, guid: 25a727078372a434280f0f7535839433, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.94
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 2738938054515243113, guid: 25a727078372a434280f0f7535839433, type: 3}
       propertyPath: m_LocalPosition.z
